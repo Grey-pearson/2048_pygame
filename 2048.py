@@ -11,15 +11,17 @@ if two tiles of same int collide they combine and double
 """
 
 Dimension = namedtuple("Dimension", ["width", "height"])
-Cells = namedtuple("Cells", ["x","y","number"])
+# Cells = namedtuple("Cells", ["x","y","number"])
 Grid = namedtuple("Grid", ["dimension", "cells"])
 Neighbors = namedtuple("Neighbors", ["number"]) # may not be used
 
 # needs some trial and error to figure out how this works
 STARTING_GRID = Grid(
     Dimension(4,4),
-    {Cells
-     (1,2,58)}
+    {
+        (0,0,2),
+        (1,2,48)
+     }
 )
 
 def draw_grid(screen: pygame.Surface, grid: Grid) -> None:
